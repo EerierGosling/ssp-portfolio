@@ -64,11 +64,13 @@ export default function Home() {
           </p>
           <br />
           <p>
-            We also have to read a book! I chose to read <a className="hover:underline" style={{ color: "var(--link)" }} href="/1984">1984 by George Orwell</a>. You can also find my <a className="hover:underline" style={{ color: "var(--link)" }} href="/mid-ssp">mid-SSP reflection</a> and <a className="hover:underline" style={{ color: "var(--link)" }} href="/final-ssp">final SSP reflection</a> on this website.
+            We also have to read a book! I chose to read <a className="hover:underline" style={{ color: "var(--link)" }} href="/1984">1984 by George Orwell</a>. You can also find my <a className="hover:underline" style={{ color: "var(--link)" }} href="/midpoint-reflection">mid-SSP reflection</a> and <a className="hover:underline" style={{ color: "var(--link)" }} href="/final-reflection">final SSP reflection</a> on this website.
           </p>
           <br />
           <p className="text-[0.9rem] italic" style={{ color: "var(--light-brown)" }}>
-            (I spent my spring doing a lot of other things too! I work for <a className="hover:underline" style={{ color: "var(--link)" }} href="https://hackclub.com">Hack Club</a> and I've been running series of hackathons called <a className="hover:underline" style={{ color: "var(--link)" }} href="https://horizons.hackclub.com">Horizons</a>.)
+            (I spent my spring doing a lot of other things too! I work for <a className="hover:underline" style={{ color: "var(--link)" }} href="https://hackclub.com">Hack Club</a> and I've been 
+            running series of hackathons called <a className="hover:underline" style={{ color: "var(--link)" }} href="https://horizons.hackclub.com">Horizons</a>.{" "}
+            The carousel of pictures below is a mix of pictures from both my SSP activities and things I did outside of SSP!)
           </p>
         </section>
       </main>

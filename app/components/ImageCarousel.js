@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 function SingleImage({ img }) {
   return (
@@ -11,8 +12,45 @@ function SingleImage({ img }) {
   );
 }
 
-export default function ImageCarousel({ images }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" });
+function TwoImages({ images, delay }) {
+  const autoplay = useRef(Autoplay({ delay, stopOnInteraction: false }));
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" }, [autoplay.current]);
+
+  return (
+    <>
+      {/* Mobile: carousel */}
+      <div className="min-[1000px]:hidden relative h-80">
+        <div className="overflow-hidden h-full" ref={emblaRef}>
+          <div className="flex h-full">
+            {images.map((img, i) => (
+              <div key={i} className="h-full shrink-0 flex-[0_0_100%]">
+                <img src={img.src} alt={img.alt ?? ""} className="h-full w-full object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+        <button onClick={() => emblaApi?.scrollPrev()} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center text-white text-xl" style={{ background: "rgba(0,0,0,0.5)" }}>‹</button>
+        <button onClick={() => emblaApi?.scrollNext()} className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center text-white text-xl" style={{ background: "rgba(0,0,0,0.5)" }}>›</button>
+      </div>
+
+      {/* Desktop: side by side */}
+      <div className="hidden min-[1000px]:flex gap-4 h-80 md:h-[28rem] px-[10px]">
+        {images.map((img, i) => (
+          <div key={i} className="flex-1 h-full flex items-center justify-center">
+            <img src={img.src} alt={img.alt ?? ""} className="h-full w-auto object-contain" />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+export default function ImageCarousel({ images, delay = 2500 }) {
+  const autoplay = useRef(Autoplay({ delay, stopOnInteraction: false }));
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "center" },
+    [autoplay.current]
+  );
 
   useEffect(() => {
     const onKey = (e) => {
@@ -25,22 +63,15 @@ export default function ImageCarousel({ images }) {
 
   if (!images.length) return null;
   if (images.length === 1) return <SingleImage img={images[0]} />;
+  if (images.length === 2) return <TwoImages images={images} delay={delay} />;
 
   return (
     <div className="relative h-70 sm:h-80 md:h-[28rem]">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {images.map((img, i) => (
-            <div
-              key={i}
-              className="h-full shrink-0"
-              style={{ flex: "0 0 750px" }}
-            >
-              <img
-                src={img.src}
-                alt={img.alt ?? ""}
-                className="h-full w-full object-contain"
-              />
+            <div key={i} className="h-full shrink-0" style={{ flex: "0 0 750px" }}>
+              <img src={img.src} alt={img.alt ?? ""} className="h-full w-full object-contain" />
             </div>
           ))}
         </div>
@@ -51,17 +82,13 @@ export default function ImageCarousel({ images }) {
         className="absolute left-3 sm:left-10 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center text-white text-xl shadow-md"
         style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(4px)" }}
         aria-label="Previous"
-      >
-        ‹
-      </button>
+      >‹</button>
       <button
         onClick={() => emblaApi?.scrollNext()}
         className="absolute right-3 sm:right-10 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center text-white text-xl shadow-md"
         style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(4px)" }}
         aria-label="Next"
-      >
-        ›
-      </button>
+      >›</button>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Final Reflection", href: "/reflection" },
+  { label: "Final Reflection", href: "/final-reflection" },
   { label: "Midpoint Reflection", href: "/midpoint-reflection" },
   { label: "Book (1984)", href: "/1984" },
   {

@@ -2,11 +2,11 @@
 
 :root {
   --light-brown: #6a451f;
-  --tan: #FEECD8;
+  --tan: #f7ede3;
   --dark-blue: #263C5F;
   --link: #0273cf;
   --light-blue: #c6d3f3;
-  --dark-brown: #563D25;
+  --dark-brown: #462f1a;
 
   --background: var(--tan);
   --foreground: #3a2410;
