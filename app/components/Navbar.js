@@ -122,7 +122,7 @@ export default function Navbar() {
           href="/"
           className="text-xl font-semibold tracking-tight text-white hover:opacity-80 transition-opacity"
         >
-          SSP Portfolio
+          Sofia Egan - SSP Portfolio
         </Link>
 
         {/* Desktop */}

@@ -7,10 +7,6 @@ export function getImages(folder) {
 
   return files
     .filter((f) => /\.(jpe?g|png|webp|gif|avif)$/i.test(f))
-    .sort((a, b) => {
-      const numA = parseInt(a, 10);
-      const numB = parseInt(b, 10);
-      return numA - numB;
-    })
+    .sort((a, b) => parseInt(a, 10) - parseInt(b, 10))
     .map((f) => ({ src: `/${folder}/${f}` }));
 }

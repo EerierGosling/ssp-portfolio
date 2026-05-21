@@ -39,7 +39,7 @@ export default function Footer() {
             className="hover:text-white transition-colors"
             style={{ color: "rgba(255,255,255,0.75)" }}
           >
-            EerierGosling/ssp-portfolio
+            eeriergosling/ssp-portfolio
           </a>
         </p>
       </div>

@@ -5,7 +5,7 @@ export const metadata = {
   title: "SSP Book: 1984",
 };
 
-export default function AdvancedTopicsPage() {
+export default function BookPage() {
   return (
     <ActivityPage
       title="1984"

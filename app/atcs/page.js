@@ -5,7 +5,7 @@ export const metadata = {
   title: "Advanced Topics in Computer Science",
 };
 
-export default function BookPage() {
+export default function ATCSPage() {
   return (
     <ActivityPage
       title="Advanced Topics in Computer Science"

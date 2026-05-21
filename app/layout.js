@@ -9,7 +9,7 @@ const figtree = Figtree({
 });
 
 export const metadata = {
-  title: "SSP Portfolio",
+  title: "Sofia Egan - SSP Portfolio",
   description: "My Portfolio for my Senior Spring Project at BB&N!",
 };
 
