@@ -2,7 +2,7 @@ import { content } from "@/app/lib/content";
 
 export const metadata = { title: "Midpoint SSP Reflection" };
 
-const order = ["atcs", "book-club", "echo-chambers", "breads-and-spreads", "bcyf", "sailing"];
+const order = ["atcs", "book-club", "echo-chambers", "breads-and-spreads", "bcyf", "sailing", "reflection"];
 
 export default function MidpointReflectionPage() {
   return (
