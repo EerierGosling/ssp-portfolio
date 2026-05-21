@@ -26,10 +26,17 @@ export default function ActivityPage({ title, subtitle, body, images = [] }) {
       </main>
 
       {images.length > 0 && (
-        <section className="w-full py-12" style={{ backgroundColor: "var(--light-blue)" }}>
-          <div className="mx-auto w-full max-w-3xl px-6">
-            <ImageCarousel images={images} />
-          </div>
+        <section
+          className="w-full py-12"
+          style={{
+            backgroundColor: "var(--light-blue)",
+            backgroundImage: "url('/paper.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundBlendMode: "multiply",
+          }}
+        >
+          <ImageCarousel images={images} />
         </section>
       )}
     </div>

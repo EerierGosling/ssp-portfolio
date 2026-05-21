@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --light-brown: #a57548;
+  --light-brown: #6a451f;
   --tan: #FEECD8;
   --dark-blue: #263C5F;
-  --light-blue: #B7C7EC;
+  --light-blue: #c6d3f3;
   --dark-brown: #563D25;
 
   --background: var(--tan);
@@ -18,11 +18,15 @@
   --color-tan: var(--tan);
   --color-dark-blue: var(--dark-blue);
   --color-light-blue: var(--light-blue);
-  --font-sans: var(--font-dm-sans);
+  --font-sans: var(--font-figtree);
 }
 
 body {
-  background: var(--background);
+  background:
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px),
+    var(--background);
+  background-size: 40px 40px, 40px 40px, auto;
   color: var(--foreground);
-  font-family: var(--font-dm-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-figtree), Arial, Helvetica, sans-serif;
 }
