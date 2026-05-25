@@ -38,17 +38,29 @@ export default function Home() {
           <p>
             <b className="font-semibold">Intellectual Engagement:</b> <a className="hover:underline" style={{ color: "var(--link)" }} href="/atcs">Advanced Topics in Computer Science</a>
           </p>
+          <p className="text-[0.8rem] italic" style={{ color: "var(--light-brown)" }}>
+            You are asked to engage in an academic experience that can be organized individually or in a group setting with a significant element of reading and either academic or artistic presentations. Examples include choosing your own intellectual project, creating your own curriculum, or continuing what you are already doing: a class, the study of art or music leading to a show/recital, or a new intellectual endeavor.
+          </p>
           <br />
           <p>
             <b className="font-semibold">Service Learning:</b> <a className="hover:underline" style={{ color: "var(--link)" }} href="/bcyf">BCYF Coding Club</a>
+          </p>
+          <p className="text-[0.8rem] italic" style={{ color: "var(--light-brown)" }}>
+            In completing this pillar, you will take part in an experience working with local and global communities that is intentional, reflective, and enriches your own SSP and engagement with others. You are encouraged to develop and/or deepen your leadership skills through engaging with communities outside of BB&N’s Upper School campus. In partnering with your local and global communities, you won’t only impact positive change within your community; you will better understand the root causes of critical social issues and your role within systems beyond your school and home communities.
           </p>
           <br />
           <p>
             <b className="font-semibold">New Experience:</b> <a className="hover:underline" style={{ color: "var(--link)" }} href="/breads-and-spreads">Breads &amp; Spreads</a>
           </p>
+          <p className="text-[0.8rem] italic" style={{ color: "var(--light-brown)" }}>
+            A new experience challenges you in some meaningful way. A brand-new experience demands that you navigate through the unknown in order to foster individual growth and develop resilience. Therefore, this pillar asks you to try something that you have not learned before. Examples include a non-swimmer learning to swim or a student who has never performed as a part of a BB&N group participating in the Spring Play.
+          </p>
           <br />
           <p>
             <b className="font-semibold">Wellness:</b> <a className="hover:underline" style={{ color: "var(--link)" }} href="/sailing">Sailing</a>
+          </p>
+          <p className="text-[0.8rem] italic" style={{ color: "var(--light-brown)" }}>
+            This pillar requires you to incorporate either a physical activity and/or a mindfulness practice into your project.  Examples of physical activities may include a team sport (participating, not managing), yoga, health and fitness, senior seminars, strength and conditioning, and others. Examples of activities with mindfulness as their primary purpose include meditation and the Mindful Living senior seminar.
           </p>
           <br />
           <p>
