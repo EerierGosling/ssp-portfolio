@@ -51,11 +51,16 @@ export default function ImageCarousel({ images, delay = 2500 }) {
     { loop: true, align: "center" },
     [autoplay.current]
   );
+  const resumeTimer = useRef(null);
 
   useEffect(() => {
     const onKey = (e) => {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
       if (e.key === "ArrowLeft") emblaApi?.scrollPrev();
       if (e.key === "ArrowRight") emblaApi?.scrollNext();
+      autoplay.current.stop();
+      clearTimeout(resumeTimer.current);
+      resumeTimer.current = setTimeout(() => autoplay.current.play(), 15000);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
